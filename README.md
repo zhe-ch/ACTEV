@@ -1,2 +1,1 @@
-# ACTEV
-Accelerator for Calcium Trace Extraction from Video
+# ACTEV: Accelerator for Calcium Trace Extraction from Video
