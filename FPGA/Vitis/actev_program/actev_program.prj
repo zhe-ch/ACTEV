@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="actev_program" location="D:/RTCImgProc/Vitis/actev_program" platform="D:/RTCImgProc/Vitis/actev_processor/export/actev_processor/actev_processor.xpfm" platformUID="xilinx:ultra96::0.0(custom)" systemProject="actev_program_system" sysConfig="actev_processor" runtime="C/C++" cpu="freertos10_xilinx_domain" cpuInstance="psu_cortexa53_0" os="freertos10_xilinx" mssSignature="dc614674d6dc9ec914618b13fb781f5d">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.311437838">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.26411337" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="freertos_lwip_tcp_perf_server" hasBspSettings="true"/>
+</sdkproject:SdkProject>
