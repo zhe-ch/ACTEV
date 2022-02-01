@@ -42,3 +42,13 @@ We also provide following C programs as a behavioral simulation model for ACTEV:
 4) [Motion Correction](Simulation/C/rigidMC): Frame-based rigid motion correction.
 5) [Trace Extraction](Simulation/C/simTracer): Support cell and tile based trace extraction, with provided example contour files.
 
+## 4. RTI Interface
+
+We developed real-time interface (RTI) in C# to support user interaction with ACTEV.
+Source code of the RTI development is under [./Software/](Software).
+Example loadable files for the RTI are collected under [./Software/file/](Software/file):
+
+1) [Cell Contour](Software/file/contour): cell/tile contour in text/binary and other parameter files in text format.
+2) [Filter Kernel](Software/file/filter): 17x17 Gaussian filter kernel in binary format.
+3) [Template](Software/file/template): 128x128 template image in text format.
+
