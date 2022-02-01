@@ -49,6 +49,6 @@ Source code of the RTI development is under [./Software/](Software).
 Example loadable files for the RTI are collected under [./Software/file/](Software/file):
 
 1) [Cell Contour](Software/file/contour): cell/tile contour in text/binary and other parameter files in text format.
-2) [Filter Kernel](Software/file/filter): 17x17 Gaussian filter kernel in binary format.
-3) [Template](Software/file/template): 128x128 template image in text format.
+2) [Filter Kernel](Software/file/filter): Constant 17x17 Gaussian contrast filter kernel in binary format.
+3) [Template](Software/file/template): Example 128x128 template image for motion correction in text format.
 
