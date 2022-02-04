@@ -92,7 +92,7 @@
             this.btnStartMCorre.Name = "btnStartMCorre";
             this.btnStartMCorre.Size = new System.Drawing.Size(196, 27);
             this.btnStartMCorre.TabIndex = 6;
-            this.btnStartMCorre.Text = "Start Motion Correction";
+            this.btnStartMCorre.Text = "Start Trace Extraction";
             this.btnStartMCorre.UseVisualStyleBackColor = true;
             this.btnStartMCorre.Click += new System.EventHandler(this.btnStartMCorre_Click);
             // 
@@ -131,7 +131,7 @@
             // 
             this.checkBoxDisplayMC.AutoSize = true;
             this.checkBoxDisplayMC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxDisplayMC.Location = new System.Drawing.Point(757, 589);
+            this.checkBoxDisplayMC.Location = new System.Drawing.Point(757, 578);
             this.checkBoxDisplayMC.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDisplayMC.Name = "checkBoxDisplayMC";
             this.checkBoxDisplayMC.Size = new System.Drawing.Size(163, 19);
@@ -200,7 +200,7 @@
             // 
             this.checkBoxBypassTemp.AutoSize = true;
             this.checkBoxBypassTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxBypassTemp.Location = new System.Drawing.Point(757, 545);
+            this.checkBoxBypassTemp.Location = new System.Drawing.Point(757, 553);
             this.checkBoxBypassTemp.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxBypassTemp.Name = "checkBoxBypassTemp";
             this.checkBoxBypassTemp.Size = new System.Drawing.Size(163, 19);
@@ -221,17 +221,10 @@
             // 
             // checkBoxDecode
             // 
-            this.checkBoxDecode.AutoSize = true;
-            this.checkBoxDecode.Enabled = false;
-            this.checkBoxDecode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxDecode.Location = new System.Drawing.Point(757, 567);
-            this.checkBoxDecode.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxDecode.Location = new System.Drawing.Point(0, 0);
             this.checkBoxDecode.Name = "checkBoxDecode";
-            this.checkBoxDecode.Size = new System.Drawing.Size(168, 19);
-            this.checkBoxDecode.TabIndex = 39;
-            this.checkBoxDecode.Text = "Enable Position Decoding";
-            this.checkBoxDecode.UseVisualStyleBackColor = true;
-            this.checkBoxDecode.CheckedChanged += new System.EventHandler(this.checkBoxDecode_CheckedChanged);
+            this.checkBoxDecode.Size = new System.Drawing.Size(104, 24);
+            this.checkBoxDecode.TabIndex = 0;
             // 
             // RTCImgProc
             // 

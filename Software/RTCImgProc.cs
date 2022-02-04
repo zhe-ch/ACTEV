@@ -43,7 +43,6 @@ namespace rt_caiman
         public static int selectROIstate = 0;
 
         public static int bypassTemplate = 0;
-        public static int enableDecoding = 0;
         public static int displayMode = 0;
         public static int recordingIsOn = 0;
 
@@ -706,7 +705,6 @@ namespace rt_caiman
                 cmd[4] = (byte)(roi_col_start % 256);
                 cmd[5] = (byte)(roi_col_start / 256);
                 cmd[6] = (byte)bypassTemplate;
-                cmd[7] = (byte)enableDecoding;
 
                 for (i = 8; i < 20; ++i)
                 {
@@ -802,33 +800,6 @@ namespace rt_caiman
                 {
                     Console.WriteLine("Unexpected exception: {0}", ex.ToString());
                 }
-
-                // Step 3: Download parameter file: param.bin
-                /*
-                if (enableDecoding == 1)
-                {
-                    inputFilename = work_path.Substring(0, loc) + "file\\param\\param.bin";
-                    fileBytes = File.ReadAllBytes(inputFilename);
-
-                    try
-                    {
-                        RTCImgProc.Send(TCPsocket, fileBytes, 0, 94300, 10000);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Unexpected exception: {0}", ex.ToString());
-                    }
-
-                    try
-                    {
-                        RTCImgProc.Receive(TCPsocket, recv, 0, 4, 10000);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Unexpected exception: {0}", ex.ToString());
-                    }
-                }
-                */
                 
                 thPlayProcess.IsBackground = true;
                 thPlayProcess.Start();
@@ -1604,14 +1575,6 @@ namespace rt_caiman
                 bypassTemplate = 1;
             else
                 bypassTemplate = 0;
-        }
-
-        private void checkBoxDecode_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxDecode.Checked == true)
-                enableDecoding = 1;
-            else
-                enableDecoding = 0;
         }
     }
 }
