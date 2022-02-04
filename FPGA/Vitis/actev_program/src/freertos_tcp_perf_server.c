@@ -41,7 +41,6 @@ static struct perf_stats server;
 #define LEARNER_NUM 23
 
 static char bypassTemplate = 0;
-static char enableDecoding = 0;
 
 static char selectModeIsMCorre = 0;
 
@@ -172,76 +171,6 @@ void IMG_INTERRUPT_Handler() {
 				fetch_status = Xil_In32(XPAR_AXI_CDMA_0_BASEADDR + 0x04);
 			}
 			Xil_DCacheFlushRange(wraddr, 0x800);
-
-			if (enableDecoding == 1)
-			{
-				/*
-				// Decoding function by linear classifier.
-				for (c = 0; c < selcell_n; ++c) {
-					rdaddr = wraddr + c * 2;
-					trace[c] = Xil_In16(rdaddr);
-				}
-
-				// Drop filter
-				if (init_frame == 1) {
-					for (c = 0; c < selcell_n; ++c) {
-						fil_trace[c] = trace[c];
-					}
-					init_frame = 0;
-				}
-				else {
-					for (c = 0; c < selcell_n; ++c) {
-						if (trace[c] < 0.95 * pre_trace[c])
-							fil_trace[c] = 0.95 * pre_trace[c];
-						else
-							fil_trace[c] = trace[c];
-					}
-				}
-
-				for (c = 0; c < selcell_n; ++c) {
-					pre_trace[c] = fil_trace[c];
-				}
-
-				// Write filtered traces to the DRAM.
-				for (c = 0; c < selcell_n; ++c) {
-					Xil_Out16(wraddr, fil_trace[c]);
-					wraddr = wraddr + 2;
-				}
-
-				// Linear classification based on computed score and loss.
-				// Compute score.
-				for (i = 0; i < LEARNER_NUM; ++i) {
-					score[i] = bias[i];
-					for (c = 0; c < selcell_n; ++c) {
-						score[i] += (fil_trace[c] * beta[c][i]);
-					}
-				}
-
-				// Compute loss.
-				for (i = 0; i < CLASS_NUM; ++i) {
-					loss[i] = 0;
-					for (c = 0; c < LEARNER_NUM; ++c) {
-						v = 1 - score[c] * coding_matrix[i][c];
-						if (v > 0) {
-							loss[i] += v;
-						}
-					}
-				}
-
-				// Compute prediction result.
-				predict_output = 1;
-				min_loss = loss[0];
-				for (i = 1; i < CLASS_NUM; ++i) {
-					if (loss[i] < min_loss) {
-						predict_output = i + 1;
-						min_loss = loss[i];
-					}
-				}
-
-				Xil_Out16(wraddr, predict_output);
-				//xil_printf("%d\n\r", predict_output);
-				*/
-			}
 		}
 
 		// Transfer image from BRAM buffer to DRAM (Last piece).
@@ -628,7 +557,6 @@ void start_application(void)
 			Xil_Out32(XPAR_CIMGPROCCTRL_0_S00_AXI_BASEADDR + 0x14, config_value);
 			xil_printf("[Info] roi_row_start = %d, roi_col_start = %d\n\r", roi_row_start, roi_col_start);
 			bypassTemplate = (u8)recv_buf[6];
-			enableDecoding = (u8)recv_buf[7];
 
 			// Send Sync Signal: [3:0] = 0.0.0.255
 			send_buf[0] = 255;
@@ -716,57 +644,6 @@ void start_application(void)
 			for (i = 0; i < 8; ++i) {
 				last_row[i] = (int) Xil_In16(rdaddr + i * 2);
 			}
-
-			// Step 3: Receive download parameter file. DRAM address offset: 0x20020000
-			/*
-			if (enableDecoding == 1)
-			{
-				wraddr = 0x20020000;
-				for (i = 0; i < 65; ++i) {
-					if (lwip_read(new_sd, recv_buf, 1446) <= 0)
-						break;
-					memcpy((void *) (uint64_t) wraddr, recv_buf, 1446);
-					wraddr += 1446;
-				}
-				if (lwip_read(new_sd, recv_buf, 310) <= 0)
-					break;
-				memcpy((void *) (uint64_t) wraddr, recv_buf, 310);
-				wraddr += 310;
-				xil_printf("[Info] Receive parameter file completed.\n\r");
-
-				for (i = 0; i < 4; ++i) {
-					send_buf[i] = 0;
-				}
-				lwip_write(new_sd, send_buf, 4);
-
-				// Load parameters for the linear classifier.
-				rdaddr = 0x20020000;
-				for (i = 0; i < CELL_NUM; ++i) {
-					for (j = 0; j < LEARNER_NUM; ++j) {
-						f32_data.int_val = Xil_In32(rdaddr);
-						rdaddr += 4;
-						beta[i][j] = f32_data.f32_val;
-					}
-				}
-				for (i = 0; i < LEARNER_NUM; ++i) {
-					f32_data.int_val = Xil_In32(rdaddr);
-					rdaddr += 4;
-					bias[i] = f32_data.f32_val;
-				}
-
-				// Build coding matrix.
-				for (i = 0; i < CLASS_NUM; ++i) {
-					for (j = 0; j < LEARNER_NUM; ++j) {
-						if (j >= i) {
-							coding_matrix[i][j] = -1;
-						}
-						else {
-							coding_matrix[i][j] = 1;
-						}
-					}
-				}
-			}
-			*/
 
 		    selcell_n = CELL_NUM;
 
