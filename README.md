@@ -8,6 +8,7 @@ The ACTEV was built on top of the [Ultra96 Platform](https://www.96boards.org/pr
 
 Please refer to bitstream and Xilinx Support Archive (XSA) files under [./FPGA/Vivado/](FPGA/Vivado).
 The precompiled FPGA image is under [./FPGA/SD/](FPGA/SD). You could simply rely on the image to boot the FPGA and run ACTEV under the SD mode.
+This directory contains two separate image files, located in [./Linear_Classifier](FPGA/SD/Linear_Classifier) and [./Tree-Based_Classifier](FPGA/SD/Tree-Based_Classifier) sub folders.
 
 ### 1.2 Embedded Software
 
