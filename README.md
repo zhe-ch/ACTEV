@@ -12,7 +12,8 @@ This directory contains two separate image files, located in [./Linear_Classifie
 
 ### 1.2 Embedded Software
 
-Source code for the embedded software is under [./FPGA/Vitis/actev_program/](FPGA/Vitis/actev_program).
+Source code for the embedded software is under [./FPGA/Vitis/](FPGA/Vitis). Embedded software with linear classifier and tree-based classifier functions are arranged in separate projects.
+
 If you would like to rebuild the embedded software in [Vitis](https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html), please remember to include the [./FPGA/Vitis/EmbeddedSw/](FPGA/Vitis/EmbeddedSw) in your project local directory. 
 
 ## 2. PCB
