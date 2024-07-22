@@ -58,4 +58,5 @@ Example loadable files for the RTI are collected under [./Software/file/](Softwa
 ## 5. Publication
 
 [1] Z. Chen, G. J. Blair, C. Guo, J. Zhou, J.-L. Romero-Sosa, A. Izquierdo, P. Golshani, J. Cong, D. Aharoni, and H. T. Blair, "A Hardware System for Real Time Decoding of In Vivo Calcium Imaging Data". eLife, 12:e78344, 2023.
+
 [2] Z. Chen, G. J. Blair, C. Cao, J. Zhou, D. Aharoni, P. Golshani, H. T. Blair, and J. Cong. "FPGA-Based In-Vivo Calcium Image Decoding for Closed-Loop Feedback Applications". IEEE Transactions on Biomedical Circuits and Systems. Volume 17, Issue 2, pp. 169-179, 2023.
