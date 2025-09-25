@@ -7,7 +7,9 @@
 
 The ACTEV was built on top of the [Ultra96 Platform](https://www.96boards.org/product/ultra96/).
 
-The system has two versions: 1) Virtual System that can run with sensor implemented on FPGA. 2) Full System that can work with the Miniscope sensor.
+The system has two versions: 
+- Virtual System that can run with sensor implemented on FPGA.
+- Full System that can work with the Miniscope sensor.
 
 The Virtual System can also be ported to a differnet FPGA platform, e.g., [Zedboard Platform](https://digilent.com/reference/programmable-logic/zedboard/).
 
