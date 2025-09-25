@@ -1,5 +1,8 @@
 # Accelerator for Calcium Trace Extraction from Video (ACTEV)
 
+<img width="341" height="341" alt="image" src="https://github.com/user-attachments/assets/a319fdde-185d-4a98-b0e4-676667bb43cd" />
+
+
 ## 1. FPGA and Embedded Software
 
 The ACTEV was built on top of the [Ultra96 Platform](https://www.96boards.org/product/ultra96/).
