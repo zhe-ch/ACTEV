@@ -12,7 +12,8 @@ clear variables;
 CELL_NUM = 1024;  % Capacity of cells for decoding.
 
 % Configure PATH for FPGA recorded traces.
-file_path = "D:\RTCImgProc_pc-Large-FF\RTCImgProc\file\trace\";
+%file_path = "D:\RTCImgProc_pc-Large-FF\RTCImgProc\file\trace\";
+file_path = "D:\MiniscopeV4\RTCImgProc_pc-Virtual-Large-FF-Trace\RTCImgProc\file\trace\";
 name = strcat(file_path, "trace.txt");
 
 % Read in FPGA recorded traces.
