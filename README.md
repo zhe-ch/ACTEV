@@ -1,7 +1,6 @@
 # Accelerator for Calcium Trace Extraction from Video (ACTEV)
 
-<img width="220" height="220" alt="image" src="https://github.com/user-attachments/assets/a319fdde-185d-4a98-b0e4-676667bb43cd" />
-
+<img width="256" height="256" alt="LOGO" src="https://github.com/user-attachments/assets/5bc18a15-6d22-472d-85df-16e6689dc55e" />
 
 ## 1. FPGA and Embedded Software
 
@@ -42,6 +41,8 @@ We provide 3 sets of Matlab scripts for analyzing calcium image data offline:
 1) [Motion Correction](Simulation/Matlab/MotionCorrect): Frame-based rigid motion correction. 
 2) [Trace Extraction](Simulation/Matlab/TraceExtraction): Separate files supporting cell and tile based trace extraction.
 3) [Linear Classifier Training](Simulation/Matlab/TrainLinearClassifier): Provide training and inference code for the linear classifier.
+
+The dataset for 1000 frames of calcium images and corresponding labels (positions on linear track) can be accessed through [Example Dataset](https://drive.google.com/drive/u/1/folders/1RVSZfkSa6Q63i8G_kmSu8uDfGQwkTUBM).
 
 ### 3.2 C Program
 
