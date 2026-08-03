@@ -67,10 +67,20 @@ cell_bin = (psf ~= 0);
 psf_scale = round(psf * 90000);
 
 % Select ROI for motion correction
+% Option-1: 128-point FFT
 roi_row_start = 192;
 roi_col_start = 192;
-
 fft_size = 128;
+
+% Option-2: 64-point FFT
+%roi_row_start = 224;
+%roi_col_start = 224;
+%fft_size = 64;
+
+% Option-3: 32-point FFT
+%roi_row_start = 240;
+%roi_col_start = 240;
+%fft_size = 32;
 
 % Get template for motion correction
 Yf = single(imgData);
@@ -90,12 +100,15 @@ drift_y = 0;
 
 % Perform motion correction for image stack
 % Contrast filtering
-Y_f = my_imfilter(Yf, psf_scale);
+Y_f = zeros (imgHeight, imgWidth, numFrames, 'single');
+for t = 1:numFrames
+    Y_f(:,:,t) = my_imfilter(Yf(:,:,t), psf_scale);
+end
 
 adj_shifts_r = zeros(numFrames,2);
 
 % Set parameters for rigid motion correction
-options_r = NoRMCorreSetParms('d1',fft_size,'d2',fft_size,'bin_width',50,'max_shift',16,...
+options_r = NoRMCorreSetParms('d1',fft_size,'d2',fft_size,'bin_width',50,'max_shift',32,...
     'iter',1,'correct_bidir',false, 'us_fac', 1, 'upd_template', false);
 
 for rnd = 1:5
