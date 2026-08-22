@@ -4,13 +4,11 @@
 
 ## 1. FPGA and Embedded Software
 
-The ACTEV was built on top of the [Ultra96 Platform](https://www.96boards.org/product/ultra96/).
+The ACTEV was built on top of the [Ultra96 Platform](https://www.96boards.org/product/ultra96/) and [Zedboard Platform](https://digilent.com/reference/programmable-logic/zedboard/).
 
 The system has two working versions: 
 - Virtual System: It can operate with a virtual sensor implemented on FPGA.
 - Full System: It can operate with the [Miniscope Sensor](http://miniscope.org/index.php/Main_Page) V3 and V4 modules.
-
-The Virtual System can also be ported to a differnet FPGA platform, e.g., [Zedboard Platform](https://digilent.com/reference/programmable-logic/zedboard/).
 
 ### 1.1 FPGA
 
