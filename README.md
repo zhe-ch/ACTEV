@@ -1,6 +1,6 @@
 # Accelerator for Calcium Trace Extraction from Video (ACTEV)
 
-<img width="256" height="256" alt="LOGO" src="https://github.com/user-attachments/assets/5bc18a15-6d22-472d-85df-16e6689dc55e" />
+<img width="300" height="230" alt="ACTEV_LOGO" src="https://github.com/user-attachments/assets/1c34e519-8dfb-40cb-b2c4-3ad81583fd1e" />
 
 ## 1. FPGA and Embedded Software
 
