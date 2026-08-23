@@ -1,16 +1,14 @@
 # Accelerator for Calcium Trace Extraction from Video (ACTEV)
 
-<img width="256" height="256" alt="LOGO" src="https://github.com/user-attachments/assets/5bc18a15-6d22-472d-85df-16e6689dc55e" />
+<img width="300" height="230" alt="ACTEV_LOGO" src="https://github.com/user-attachments/assets/1c34e519-8dfb-40cb-b2c4-3ad81583fd1e" />
 
 ## 1. FPGA and Embedded Software
 
-The ACTEV was built on top of the [Ultra96 Platform](https://www.96boards.org/product/ultra96/).
+The ACTEV was built on top of the [Ultra96 Platform](https://www.96boards.org/product/ultra96/) and [Zedboard Platform](https://digilent.com/reference/programmable-logic/zedboard/).
 
 The system has two working versions: 
 - Virtual System: It can operate with a virtual sensor implemented on FPGA.
 - Full System: It can operate with the [Miniscope Sensor](http://miniscope.org/index.php/Main_Page) V3 and V4 modules.
-
-The Virtual System can also be ported to a differnet FPGA platform, e.g., [Zedboard Platform](https://digilent.com/reference/programmable-logic/zedboard/).
 
 ### 1.1 FPGA
 
